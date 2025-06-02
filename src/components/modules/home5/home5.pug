@@ -1,0 +1,63 @@
+section(class="featured-products py-20 bg-primary-1")
+	div(class="container mx-auto")
+		div(class="text-center mb-12")
+			h2(class="text-4xl lg:text-5xl font-bold text-white") Sản phẩm nổi bật
+		
+		div(class="products-slider-wrapper relative")
+			button(class="slider-btn prev absolute -left-24 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full sq-12 flex-center shadow-drop-shadow-2 transition-300 hover:shadow-style-1" aria-label="Previous")
+				img(src="./img/buttonleft2.png" alt="Previous" class="w-full h-full object-contain")
+			
+			button(class="slider-btn next absolute -right-24 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full sq-12 flex-center shadow-drop-shadow-2 transition-300 hover:shadow-style-1" aria-label="Next")
+				img(src="./img/buttonright2.png" alt="Next" class="w-full h-full object-contain")
+			
+			div(class="products-slider overflow-hidden")
+				div(class="slider-track flex gap-10 transition-tranorm duration-500")
+					
+					div(class="product-card--home5 flex-shrink-0")
+						div(class="product-inner rounded-2.5 overflow-hidden transition-300 hover:shadow-style-1 relative group")
+							div(class="product-image aspect-square flex relative")
+								img(class="w-full h-full hover:scale-105 transition-transform duration-300" src="./img/home5_1.png" alt="Thanh long sấy thăng hoa")
+								.eye-icon-container(class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:-translate-y-0")
+										img(src="./img/home4producthover.png" alt="View Product")
+							div(class="product-info p-6 text-center")
+								div(class="product-category text-xs text-body-text-99 mb-2 uppercase") BỘT SẤY THĂNG HOA
+								h3(class="product-name text-base font-semibold text-white mb-3 transition-300 group-hover:text-primary-2") Thanh long sấy thăng hoa
+								div(class="product-price text-lg font-bold text-white") 46.000 đ
+					
+					div(class="product-card--home5 flex-shrink-0")
+						div(class="product-inner rounded-2.5 overflow-hidden transition-300 hover:shadow-style-1 relative group")
+							div(class="product-image aspect-square flex relative")
+								img(class="w-full h-full hover:scale-105 transition-transform duration-300" src="./img/home5_2.png" alt="Bột rau củ quả sấy thăng hoa")
+								.eye-icon-container(class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:-translate-y-0")
+										img(src="./img/home4producthover.png" alt="View Product")
+							div(class="product-info p-6 text-center")
+								div(class="product-category text-xs text-body-text-99 mb-2 uppercase") BỘT SẤY THĂNG HOA
+								h3(class="product-name text-base font-semibold text-white mb-3 transition-300 group-hover:text-primary-2") Bột rau củ quả sấy thăng hoa
+								div(class="product-price text-lg font-bold text-white") 46.000 đ
+					
+					div(class="product-card--home5 flex-shrink-0")
+						div(class="product-inner rounded-2.5 overflow-hidden transition-300 hover:shadow-style-1 relative group")
+							div(class="product-image aspect-square flex relative")
+								img(class="w-full h-full hover:scale-105 transition-transform duration-300" src="./img/home5_3.png" alt="Sữa chua sấy vị chuối sấy thăng hoa")
+								.eye-icon-container(class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:-translate-y-0")
+										img(src="./img/home4producthover.png" alt="View Product")
+							div(class="product-info p-6 text-center")
+								div(class="product-category text-xs text-body-text-99 mb-2 uppercase") SỮA CHUA SẤY THĂNG HOA
+								h3(class="product-name text-base font-semibold text-white mb-3 transition-300 group-hover:text-primary-2") Sữa chua sấy vị chuối sấy thăng hoa
+								div(class="product-price text-lg font-bold text-white") 46.000 đ
+					
+					div(class="product-card--home5 flex-shrink-0")
+						div(class="product-inner rounded-2.5 overflow-hidden transition-300 hover:shadow-style-1 relative group")
+							div(class="product-image aspect-square flex relative")
+								img(class="w-full h-full hover:scale-105 transition-transform duration-300" src="./img/home5_4.png" alt="Bí đỏ sấy thăng hoa")
+								.eye-icon-container(class="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 invisible transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:-translate-y-0")
+										img(src="./img/home4producthover.png" alt="View Product")
+							div(class="product-info p-6 text-center")
+								div(class="product-category text-xs text-body-text-99 mb-2 uppercase") RAU CỦ QUẢ SẤY THĂNG HOA
+								h3(class="product-name text-base font-semibold text-white mb-3 transition-300 group-hover:text-primary-2") Bí đỏ sấy thăng hoa
+								div(class="product-price text-lg font-bold text-white") 46.000 đ
+		
+		div(class="text-center mt-12")
+			button(class="view-all-btn group inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white text-white font-medium transition-300 hover:bg-primary-2 hover:text-white")
+				| Xem tất cả
+				img(src="./img/arrow-up.png", alt="Arrow Up", class="group-hover:rotate-45 transition-transform duration-300")

@@ -1,0 +1,42 @@
+.agriculture-section
+	background-color: #f9f9f9
+	position: relative
+
+	.images-wrapper
+		@media (max-width: 1023px)
+			margin-top: calc(40/1920*100rem)
+
+		.image-item
+			aspect-ratio: 1/1
+			position: relative
+			overflow: hidden
+
+			img
+				transition: transform 0.3s ease
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+				&:hover
+					transform: scale(1.05)
+
+	.button-wrapper
+		a
+			position: relative
+			overflow: hidden
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: -100%
+				width: 100%
+				height: 100%
+				background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)
+				transition: left 0.5s ease
+
+			&:hover::before
+				left: 100% 
+
+.logo-center
+	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)) 

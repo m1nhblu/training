@@ -1,0 +1,142 @@
+footer
+	.input-email
+		button.btn-send
+			@apply bg-primary-1 rounded-3xl gap-3 px-6 py-1 justify-center items-center hover:bg-primary-2 transition-all duration-300
+			
+			.arrow-icon
+				@apply transform rotate-45 transition-transform duration-300
+				
+			&:hover .arrow-icon
+				@apply rotate-90
+	
+	.certification
+		.logo-certification
+			img
+				@apply w-auto h-15
+				
+				@media (max-width: 1023px)
+					@apply h-12
+	
+	ul li a
+		@apply hover:text-primary-1 transition-colors duration-300
+	
+	.container-info
+		> a
+			@apply hover:underline transition-all duration-300
+		
+		.social-media
+			a
+				@apply px-4 py-3 rounded-md bg-white text-primary-1 hover:bg-primary-2 hover:text-white transition-300
+				
+				@media (max-width: 1023px)
+					@apply px-3 py-2
+	
+	@media (max-width: 1023px)
+		.container
+			@apply px-4
+		
+		.input-email
+			input
+				@apply text-sm
+			
+			button
+				@apply px-3
+				
+				span
+					@apply text-xs
+		
+		.bg-primary-1
+			img[alt="bg-footer"]
+				@apply opacity-30
+	
+	@media (min-width: 768px) and (max-width: 1023px)
+		.container
+			@apply px-8
+		
+		.grid-cols-1
+			&.lg\\:grid-cols-8
+				@apply grid-cols-2
+				
+				> div:first-child
+					@apply col-span-2
+	
+
+@mixin mobile
+	@media (max-width: 767px)
+		@content
+
+@mixin tablet
+	@media (min-width: 768px) and (max-width: 1023px)
+		@content
+
+@mixin desktop
+	@media (min-width: 1024px)
+		@content
+
+.footer-utilities
+	html
+		scroll-behavior: smooth
+	
+	a:focus,
+	button:focus,
+	input:focus
+		@apply outline-none ring-2 ring-primary-1 ring-offset-2
+	
+	@keyframes slideInUp
+		from
+			transform: translateY(20px)
+			opacity: 0
+		to
+			transform: translateY(0)
+			opacity: 1
+	
+	@keyframes fadeIn
+		from
+			opacity: 0
+		to
+			opacity: 1
+	
+	.animate-on-scroll
+		&.animate-slide-up
+			animation: slideInUp 0.6s ease-out
+		
+		&.animate-fade-in
+			animation: fadeIn 0.8s ease-out
+
+.text-truncate-mobile
+	@include mobile
+		@apply truncate
+	
+	@include desktop
+		@apply whitespace-normal
+
+.spacing-responsive
+	@include mobile
+		@apply py-6 px-4
+	
+	@include tablet
+		@apply py-8 px-6
+	
+	@include desktop
+		@apply py-10 px-8
+
+.gap-responsive
+	@include mobile
+		@apply gap-4
+	
+	@include tablet
+		@apply gap-6
+	
+	@include desktop
+		@apply gap-8
+	*
+		@apply transition-all duration-300 ease-in-out
+
+@media (max-width: 768px)
+	.floating-toolbox
+		right: 1rem
+		bottom: 5rem
+		
+		.tool-btn
+			width: 2.5rem
+			height: 2.5rem

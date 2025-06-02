@@ -1,0 +1,95 @@
+header(class="main-header bg-white font-roboto")
+	div(class="container mx-auto")
+		div(class="header-wrapper flex-between py-4")
+			a(class="logo flex items-center" href="/")
+				img(class="h-12" src="./img/headerlogo.png" alt="ACR Logo")
+			nav(class="main-nav hidden lg:block")
+				ul(class="nav-list flex items-center gap-8")
+					li(class="nav-item")
+						a(class="nav-link flex items-center gap-2 text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/")
+							img(class="w-5 h-5" src="./img/home1.png" alt="Home")
+					li(class="nav-item")
+						a(class="nav-link text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/aboutnpm.html") Giới thiệu
+					li(class="nav-item has-dropdown relative")
+						a(class="nav-link flex items-center gap-2 text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/san-pham")
+							| Sản phẩm
+							i(class="fas fa-chevron-down text-xs")
+						div(class="dropdown-menu absolute top-full left-0 mt-2 w-60 bg-white rounded-lg shadow-style-1 opacity-0 invisible transition-300")
+							ul(class="py-2")
+								li
+									a(class="dropdown-link block px-5 py-3 text-sm text-body-text-33 transition-300 hover:bg-background-2 hover:text-primary-2" href="/bot-say-thang-hoa") Bột sấy thăng hoa
+								li
+									a(class="dropdown-link block px-5 py-3 text-sm text-body-text-33 transition-300 hover:bg-background-2 hover:text-primary-2" href="/trai-cay-say") Trái cây sấy
+								li
+									a(class="dropdown-link block px-5 py-3 text-sm text-body-text-33 transition-300 hover:bg-background-2 hover:text-primary-2" href="/rau-cu-say") Rau củ sấy
+								li
+									a(class="dropdown-link block px-5 py-3 text-sm text-body-text-33 transition-300 hover:bg-background-2 hover:text-primary-2" href="/sua-chua-say") Sữa chua sấy
+					li(class="nav-item")
+						a(class="nav-link text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/cong-bo-san-pham") Công bố sản phẩm
+					li(class="nav-item")
+						a(class="nav-link text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/quy-trinh-cong-nghe") Quy trình công nghệ
+					li(class="nav-item")
+						a(class="nav-link text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/chung-nhan") Chứng nhận
+					li(class="nav-item")
+						a(class="nav-link text-neutral-900 text-lg font-medium transition-300 hover:text-primary-2" href="/tin-tuc") Tin tức
+			div(class="header-actions flex items-center gap-6")
+				button(class="search-btn text-body-text-33 transition-300 hover:text-primary-2" aria-label="Search")
+					img(class="w-5 h-5" src="./img/search.png" alt="Search")
+				
+				div(class="language-selector relative")
+					button(class="lang-btn flex items-center gap-2 text-body-text-33 font-medium transition-300 hover:text-primary-2")
+						| VN
+						i(class="fas fa-chevron-down text-xs")
+					div(class="lang-dropdown absolute top-full right-0 mt-2 w-24 bg-white rounded-lg shadow-style-1 opacity-0 invisible transition-300")
+						ul(class="py-2")
+							li
+								a(class="lang-option block px-4 py-2 text-sm text-body-text-33 transition-300 hover:bg-background-2 hover:text-primary-2" href="#") VN
+							li
+								a(class="lang-option block px-4 py-2 text-sm text-body-text-33 transition-300 hover:bg-background-2 hover:text-primary-2" href="#") EN
+				a(class="contact-btn group flex items-center gap-2 px-6 py-3 bg-primary-1 text-white text-lg font-medium rounded-full transition-300 hover:bg-primary-2" href="/lien-he")
+					| Liên hệ
+					img(src="./img/arrow-up.png", alt="Arrow Up", class="transition-transform duration-300 group-hover:rotate-45")
+				
+				button(class="mobile-menu-toggle lg:hidden text-body-text-33 text-2xl" aria-label="Toggle Menu")
+					i(class="fas fa-bars")
+div(class="mobile-menu fixed top-0 right-0 w-80 h-full bg-white shadow-style-1 transform translate-x-full transition-300 z-1000 lg:hidden")
+	div(class="mobile-menu-header flex-between p-5 border-b border-stroke-E0")
+		div(class="logo")
+			img(class="h-10" src="path/to/logo-acr.svg" alt="ACR Logo")
+		button(class="close-menu text-2xl text-body-text-33" aria-label="Close Menu")
+			i(class="fas fa-times")
+	div(class="mobile-menu-body overflow-y-auto h-full pb-24")
+		ul(class="mobile-nav-list py-5")
+			li(class="mobile-nav-item")
+				a(class="mobile-nav-link flex items-center gap-3 px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2" href="/")
+					img(class="w-5 h-5" src="./img/home1.png" alt="Home")
+					| Trang chủ
+			li(class="mobile-nav-item")
+				a(class="mobile-nav-link block px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2" href="/gioi-thieu") Giới thiệu
+			li(class="mobile-nav-item")
+				div(class="mobile-dropdown")
+					button(class="mobile-dropdown-toggle w-full flex-between px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2")
+						| Sản phẩm
+						i(class="fas fa-chevron-down text-xs transition-300")
+					div(class="mobile-dropdown-content hidden bg-background-2")
+						a(class="block px-8 py-2 text-sm text-body-text-66 hover:text-primary-2" href="/bot-say-thang-hoa") Bột sấy thăng hoa
+						a(class="block px-8 py-2 text-sm text-body-text-66 hover:text-primary-2" href="/trai-cay-say") Trái cây sấy
+						a(class="block px-8 py-2 text-sm text-body-text-66 hover:text-primary-2" href="/rau-cu-say") Rau củ sấy
+						a(class="block px-8 py-2 text-sm text-body-text-66 hover:text-primary-2" href="/sua-chua-say") Sữa chua sấy
+			li(class="mobile-nav-item")
+				a(class="mobile-nav-link block px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2" href="/cong-bo-san-pham") Công bố sản phẩm
+			li(class="mobile-nav-item")
+				a(class="mobile-nav-link block px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2" href="/quy-trinh-cong-nghe") Quy trình công nghệ
+			li(class="mobile-nav-item")
+				a(class="mobile-nav-link block px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2" href="/chung-nhan") Chứng nhận
+			li(class="mobile-nav-item")
+				a(class="mobile-nav-link block px-5 py-3 text-body-text-33 font-medium transition-300 hover:bg-background-2 hover:text-primary-2" href="/tin-tuc") Tin tức
+		div(class="mobile-language px-5 py-3 border-t border-stroke-E0")
+			div(class="flex gap-4")
+				button(class="lang-option px-4 py-2 rounded-full bg-primary-1 text-white font-medium") VN
+				button(class="lang-option px-4 py-2 rounded-full border border-stroke-E0 text-body-text-66 font-medium") EN
+		div(class="mobile-contact px-5 py-5")
+			a(class="w-full group flex items-center justify-center gap-2 px-6 py-3 bg-primary-1 text-white rounded-full font-medium" href="/lien-he")
+				| Liên hệ
+				img(src="./img/arrow-up.png", alt="Arrow Up", class="transition-transform duration-300 group-hover:rotate-45")
+div(class="mobile-menu-overlay fixed inset-0 bg-black bg-opacity-50 opacity-0 invisible transition-300 z-999 lg:hidden")

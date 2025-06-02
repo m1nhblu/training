@@ -1,0 +1,38 @@
+.main-header
+	transition: all 0.3s ease
+	
+	&.scrolled
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
+	
+	.has-dropdown:hover .dropdown-menu
+		opacity: 1
+		visibility: visible
+	
+	.language-selector:hover .lang-dropdown
+		opacity: 1
+		visibility: visible
+		z-index: 1001
+	
+	&.mobile-menu-open
+		.mobile-menu
+			transform: translateX(0)
+		
+		.mobile-menu-overlay
+			opacity: 1
+			visibility: visible
+	
+	.mobile-dropdown
+		.fa-chevron-down
+			transition: transform 0.3s ease
+		
+		&.active
+			.fa-chevron-down
+				transform: rotate(180deg)
+			
+			.mobile-dropdown-content
+				display: block
+	
+	.has-dropdown
+		.dropdown-menu
+			z-index: 1001
+			position: absolute

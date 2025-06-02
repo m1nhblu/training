@@ -1,0 +1,41 @@
+section(class="news-section py-20 bg-white")
+	div(class="container mx-auto")
+		div(class="text-center mb-10")
+			h2(class="text-4xl lg:text-6xl font-bold text-body-text-11 mb-6") Tin tức
+			
+			div(class="category-tabs flex flex-wrap justify-center gap-3")
+				button(class="tab-item active px-6 py-3 rounded-full bg-primary-2 text-white font-medium transition-300") Tất cả
+				button(class="tab-item px-6 py-3 rounded-full border border-stroke-E0 text-body-text-66 font-medium transition-300 hover:border-primary-2 hover:text-primary-2") Tin hoạt động
+				button(class="tab-item px-6 py-3 rounded-full border border-stroke-E0 text-body-text-66 font-medium transition-300 hover:border-primary-2 hover:text-primary-2") Sự kiện
+		
+		div(class="news-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6")
+			
+			article(class="news-card rounded-lg overflow-hidden shadow-drop-shadow-2 transition-300 hover:shadow-style-1 cursor-pointer group")
+				div(class="news-image aspect-video overflow-hidden")
+					img(class="w-full h-full object-cover transition-300 hover:scale-110" src="./img/home6_1.png" alt="Bí quyết chọn thực phẩm chất lượng cao")
+				div(class="news-content p-6")
+					div(class="news-meta flex items-center gap-4 mb-4")
+						span(class="category px-3 py-1 rounded border border-stroke-E0 text-xs text-body-text-99") Tin hoạt động
+						span(class="date text-xs text-body-text-99") 04.03.2025
+					h3(class="news-title text-lg font-semibold text-body-text-11 mb-3 line-clamp-2 transition-300 group-hover:text-primary-2") Bí quyết chọn thực phẩm chất lượng cao...
+					p(class="news-excerpt text-sm text-body-text-66 line-clamp-3") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet...
+			
+			article(class="news-card rounded-lg overflow-hidden shadow-drop-shadow-2 transition-300 hover:shadow-style-1 cursor-pointer group")
+				div(class="news-image aspect-video overflow-hidden")
+					img(class="w-full h-full object-cover transition-300 hover:scale-110" src="./img/home6_2.png" alt="Ứng dụng công nghệ sấy thực phẩm")
+				div(class="news-content p-6")
+					div(class="news-meta flex items-center gap-4 mb-4")
+						span(class="category px-3 py-1 rounded border border-stroke-E0 text-xs text-body-text-99") Sự kiện
+						span(class="date text-xs text-body-text-99") 04.03.2025
+					h3(class="news-title text-lg font-semibold text-body-text-11 mb-3 line-clamp-2 transition-300 group-hover:text-primary-2") Ứng dụng công nghệ sấy thực phẩm...
+					p(class="news-excerpt text-sm text-body-text-66 line-clamp-3") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet...
+			
+			article(class="news-card rounded-lg overflow-hidden shadow-drop-shadow-2 transition-300 hover:shadow-style-1 cursor-pointer group")
+				div(class="news-image aspect-video overflow-hidden")
+					img(class="w-full h-full object-cover transition-300 hover:scale-110" src="./img/home6_3.png" alt="Làm thế nào để chọn thực phẩm chất")
+				div(class="news-content p-6")
+					div(class="news-meta flex items-center gap-4 mb-4")
+						span(class="category px-3 py-1 rounded border border-stroke-E0 text-xs text-body-text-99") Tin hoạt động
+						span(class="date text-xs text-body-text-99") 04.03.2025
+					h3(class="news-title text-lg font-semibold text-body-text-11 mb-3 line-clamp-2 transition-300 group-hover:text-primary-2") Làm thế nào để chọn thực phẩm chất...
+					p(class="news-excerpt text-sm text-body-text-66 line-clamp-3") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet...

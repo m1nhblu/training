@@ -1,0 +1,37 @@
+.product-showcase
+	.tab-item
+		&.active
+			background-color: #ed9a22
+			color: white
+			border-color: #ed9a22
+
+	.product-card--home4
+		cursor: pointer
+		position: relative
+
+		.product-name
+			transition: color 0.3s ease
+			color: inherit
+
+		&:hover
+			.product-name
+				color: #ed9a22 !important
+
+			.product-image
+				transform: translateY(-5px)
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1)
+
+	.product-image
+		transition: all 0.3s ease
+
+		img
+			transition: transform 0.3s ease
+
+		&:hover img
+			transform: scale(1.05)
+
+	.product-name
+		transition: color 0.3s ease
+		
+		&:hover
+			color: #ed9a22 

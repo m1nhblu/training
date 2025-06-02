@@ -1,0 +1,50 @@
+.featured-products
+	background-color: #1a4c40
+	.slider-btn
+		@media (max-width: 1024px)
+			transform: translateY(-50%) translateX(0)
+		&.prev
+			@media (max-width: 1024px)
+				left: 10px
+		&.next
+			@media (max-width: 1024px)
+				right: 10px
+		&:hover
+			background-color: #f5f5f5
+		&:disabled
+			opacity: 0.5
+			cursor: not-allowed
+	.product-card
+		.product-inner
+			height: 100%
+			display: flex
+			flex-direction: column
+			&:hover
+				transform: translateY(-5px)
+				.product-name
+					color: #ed9a22
+				.product-image img
+					transform: scale(1.05)
+		.product-image
+			img
+				transition: transform 0.3s ease
+	.view-all-btn
+		border-width: 2px
+
+.products-slider-wrapper
+	.products-slider
+		.slider-track
+			display: flex
+			gap: calc(24/1920*100rem)
+
+.product-card--home5
+	flex-shrink: 0
+	$gap-value: calc(40/1920*100rem)
+
+	width: calc(100% - 0 * #{$gap-value})
+
+	@media (min-width: 576px)
+		width: calc((100% - 1 * #{$gap-value}) / 2)
+
+	@media (min-width: 1024px)
+		width: calc((100% - 3 * #{$gap-value}) / 4)

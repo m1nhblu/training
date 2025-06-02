@@ -1,0 +1,24 @@
+section.hero-agriculture(class="relative w-full bg-cover bg-center bg-no-repeat xl:h-[calc(683/1920*100rem)]" style="background-image: url('./img/bghome2.png')")
+	.container(class="mx-auto py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start")
+		
+		.col(class="col-span-1 lg:col-span-5 lg:mt-[calc(282/1920*100rem)]")
+			.content-wrapper
+				.relative-container(class="relative")
+					+PugImg("./img/home2double.png", "Quote Icon")(class="absolute rem:-top-12	rem:-left-9	")
+					h1(class="text-white font-roboto text-5xl font-medium leading-[calc(56/1920*100rem)] mb-8")
+						| Nâng Tầm Giá Trị Nông
+						br
+						| Sản Với Công Nghệ Sấy
+						br
+						| Thăng Hoa Định Cao
+		.col(class="col-span-1 lg:col-span-7")
+			.grid(class="grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-x-6 gap-y-6 w-full max-w-3xl mx-auto")
+				.stat-box(class="bg-primary-2 bg-opacity-20 backdrop-blur-md rounded-2.5 p-8 text-center text-white w-[calc(259/1920*100rem)] h-[calc(258/1920*100rem)] md:col-start-1 md:row-start-2")
+					.icon(class="mb-4 flex justify-center items-center w-full h-full")
+						+PugImg("./img/home2_1.png", "Icon")
+				.stat-box(class="bg-primary-2 bg-opacity-20 backdrop-blur-md rounded-2.5 p-8 text-center text-white w-[calc(259/1920*100rem)] h-[calc(258/1920*100rem)] md:col-start-2 md:row-start-1")
+					.icon(class="mb-4 flex justify-center items-center w-full h-full")
+						+PugImg("./img/home2_2.png", "Icon")
+				.stat-box(class="bg-primary-2 bg-opacity-20 backdrop-blur-md rounded-2.5 p-8 text-center text-white w-[calc(259/1920*100rem)] h-[calc(258/1920*100rem)] md:col-start-3 md:row-start-2")
+					.icon(class="mb-4 flex justify-center items-center w-full h-full")
+						+PugImg("./img/home2_3.png", "Icon")
