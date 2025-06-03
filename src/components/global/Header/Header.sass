@@ -1,38 +1,484 @@
+// Header Main Styles
 .main-header
+	width: 100%
+	height: calc(90/1920*100rem)
 	transition: all 0.3s ease
+	position: relative
+	z-index: 100
+	
+	&.shadow-bottom
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08)
+	
+	@media (max-width: 1199.98px)
+		height: auto
 	
 	&.scrolled
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1)
 	
-	.has-dropdown:hover .dropdown-menu
-		opacity: 1
-		visibility: visible
-	
-	.language-selector:hover .lang-dropdown
-		opacity: 1
-		visibility: visible
-		z-index: 1001
-	
-	&.mobile-menu-open
-		.mobile-menu
-			transform: translateX(0)
+	// Header Container
+	.header-container
+		width: 100%
+		max-width: calc(1920/1920*100rem)
+		margin: 0 auto
+		padding: calc(16/1920*100rem) calc(100/1920*100rem)
+		height: 100%
 		
-		.mobile-menu-overlay
+		@media (max-width: 1200px)
+			padding: 8px
+		
+		@media (max-width: 768px)
+			padding: 12px 15px
+	
+	// Header Wrapper - Flex Container
+	.header-wrapper
+		height: 100%
+		display: flex
+		align-items: center
+		gap: calc(77.5/1920*100rem)
+		
+		@media (max-width: 1200px)
+			gap: 8px
+		
+		@media (max-width: 1024px)
+			justify-content: space-between
+			gap: 20px
+	
+	// Logo
+	.logo
+		display: flex
+		align-items: center
+		flex-shrink: 0
+		
+		img
+			height: calc(58/1920*100rem)
+			width: auto
+			
+			@media (max-width: 1200px)
+				height: 48px
+			
+			@media (max-width: 768px)
+				height: 40px
+	
+	// Main Navigation
+	.main-nav
+		flex: 1
+		display: flex
+		justify-content: center
+		
+		@media (max-width: 1024px)
+			display: none
+		
+		.nav-list
+			display: flex
+			align-items: center
+			gap: calc(64/1920*100rem)
+			
+			@media (max-width: 1200px)
+				gap: 16px
+		
+		.nav-item
+			position: relative
+			
+			&.has-dropdown
+				&:hover .dropdown-menu
+					opacity: 1
+					visibility: visible
+		
+		.nav-link
+			display: flex
+			align-items: center
+			gap: calc(8/1920*100rem)
+			font-size: calc(18/1920*100rem)
+			font-weight: 500
+			transition: all 0.3s ease
+			padding: calc(8/1920*100rem) 0
+			white-space: nowrap
+			
+			@media (max-width: 1200px)
+				font-size: 16px
+				gap: 6px
+			
+			i
+				font-size: calc(20/1920*100rem) !important
+				
+				@media (max-width: 1200px)
+					font-size: 18px !important
+				
+				&.fa-caret-down
+					font-size: calc(12/1920*100rem)
+					
+					@media (max-width: 1200px)
+						font-size: 10px
+	
+	// Dropdown Menu
+	.dropdown-menu
+		position: absolute
+		top: 100%
+		left: 0
+		margin-top: calc(8/1920*100rem)
+		width: calc(240/1920*100rem)
+		background: white
+		border-radius: calc(8/1920*100rem)
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+		opacity: 0
+		visibility: hidden
+		transition: all 0.3s ease
+		z-index: 50
+		
+		@media (max-width: 1199.98px)
+			width: 220px
+			margin-top: 8px
+			border-radius: 8px
+		
+		ul
+			padding: calc(8/1920*100rem) 0
+			
+			@media (max-width: 1199.98px)
+				padding: 8px 0
+		
+		.dropdown-link
+			display: block
+			padding: calc(12/1920*100rem) calc(20/1920*100rem)
+			font-size: calc(14/1920*100rem)
+			transition: all 0.3s ease
+			
+			@media (max-width: 1199.98px)
+				padding: 10px 16px
+				font-size: 14px
+			
+			&:hover
+				background: #F5F5F5
+	
+	// Header Actions
+	.header-actions
+		display: flex
+		align-items: center
+		gap: 16px !important
+		flex-shrink: 0
+		
+		@media (min-width: 1024px)
+			gap: 24px !important
+		
+		@media (max-width: 1200px)
+			gap: 8px !important
+	
+	// Search Button
+	.search-btn
+		background: none
+		border: none
+		padding: calc(8/1920*100rem)
+		cursor: pointer
+		transition: all 0.3s ease
+		
+		@media (max-width: 1199.98px)
+			padding: 6px
+		
+		&:hover
+			color: #6e27c5
+		
+		i
+			font-size: calc(24/1920*100rem) !important
+			line-height: 1
+			
+			@media (max-width: 1199.98px)
+				font-size: 20px !important
+	
+	// Language Selector
+	.language-selector
+		position: relative
+		
+		&:hover .lang-dropdown
 			opacity: 1
 			visibility: visible
-	
-	.mobile-dropdown
-		.fa-chevron-down
-			transition: transform 0.3s ease
 		
-		&.active
-			.fa-chevron-down
-				transform: rotate(180deg)
+		.lang-btn
+			background: none
+			border: none
+			display: flex
+			align-items: center
+			gap: calc(8/1920*100rem)
+			padding: calc(8/1920*100rem)
+			cursor: pointer
+			font-weight: 500
+			transition: all 0.3s ease
+			
+			@media (max-width: 1199.98px)
+				gap: 6px
+				padding: 6px
+			
+			&:hover
+				color: #6e27c5
+			
+			i
+				color: #333333
+				font-size: calc(12/1920*100rem)
+				
+				@media (max-width: 1199.98px)
+					font-size: 10px
+		
+		.lang-dropdown
+			position: absolute
+			top: 100%
+			right: 0
+			margin-top: calc(8/1920*100rem)
+			width: calc(96/1920*100rem)
+			background: white
+			border-radius: calc(8/1920*100rem)
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+			opacity: 0
+			visibility: hidden
+			transition: all 0.3s ease
+			z-index: 50
+			
+			@media (max-width: 1199.98px)
+				width: 80px
+				margin-top: 8px
+				border-radius: 8px
+			
+			ul
+				padding: calc(8/1920*100rem) 0
+				
+				@media (max-width: 1199.98px)
+					padding: 8px 0
+			
+			.lang-option
+				display: block
+				padding: calc(8/1920*100rem) calc(16/1920*100rem)
+				font-size: calc(14/1920*100rem)
+				text-align: center
+				transition: all 0.3s ease
+				
+				@media (max-width: 1199.98px)
+					padding: 6px 12px
+					font-size: 14px
+				
+				&:hover
+					background: #F5F5F5
+	
+	// Contact Button
+	.contact-btn
+		display: flex
+		align-items: center
+		gap: calc(8/1920*100rem)
+		padding: calc(12/1920*100rem) calc(24/1920*100rem)
+		background: #1a4c40
+		color: white
+		font-size: calc(18/1920*100rem)
+		font-weight: 500
+		border-radius: calc(24/1920*100rem)
+		transition: all 0.3s ease
+		
+		@media (max-width: 1200px)
+			min-width: 90px
+			padding: 6px 8px
+			font-size: 14px
+			gap: 4px
+			border-radius: 20px
+		
+		@media (max-width: 768px)
+			display: none
+		
+		img
+			width: calc(16/1920*100rem)
+			height: calc(16/1920*100rem)
+			transition: transform 0.3s ease
+			
+			@media (max-width: 1199.98px)
+				width: 14px
+				height: 14px
+	
+	// Mobile Menu Toggle
+	.mobile-menu-toggle
+		background: none
+		border: none
+		padding: calc(8/1920*100rem)
+		cursor: pointer
+		color: #333333
+		
+		@media (min-width: 1024px)
+			display: none
+		
+		@media (max-width: 1023.98px)
+			display: block
+		
+		i
+			font-size: 24px
+
+// Mobile Menu Styles
+.mobile-menu
+	position: fixed
+	top: 0
+	right: 0
+	width: 320px
+	height: 100%
+	background: white
+	box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15)
+	transform: translateX(100%)
+	transition: transform 0.3s ease
+	z-index: 1000
+	
+	@media (max-width: 767.98px)
+		width: 280px
+	
+	&.active
+		transform: translateX(0)
+	
+	.mobile-menu-header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px
+		border-bottom: 1px solid #E0E0E0
+		
+		.logo img
+			height: 40px
+		
+		.close-menu
+			background: none
+			border: none
+			font-size: 24px
+			color: #333333
+			cursor: pointer
+	
+	.mobile-menu-body
+		overflow-y: auto
+		height: calc(100% - 80px)
+		padding-bottom: 60px
+		
+		.mobile-nav-list
+			padding: 20px 0
+		
+		.mobile-nav-link
+			display: block
+			padding: 12px 20px
+			color: #333333
+			font-weight: 500
+			transition: all 0.3s ease
+			
+			&:hover
+				background: #F5F5F5
+				color: #6e27c5
+			
+			i
+				color: #6e27c5
+		
+		.mobile-dropdown
+			.mobile-dropdown-toggle
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 12px 20px
+				background: none
+				border: none
+				text-align: left
+				color: #333333
+				font-weight: 500
+				cursor: pointer
+				transition: all 0.3s ease
+				
+				&:hover
+					background: #F5F5F5
+					color: #6e27c5
+				
+				i
+					color: #333333
+					transition: transform 0.3s ease
+			
+			&.active
+				.mobile-dropdown-toggle i
+					transform: rotate(180deg)
+				
+				.mobile-dropdown-content
+					display: block
 			
 			.mobile-dropdown-content
-				display: block
+				display: none
+				background: #F5F5F5
+				
+				a
+					display: block
+					padding: 8px 32px
+					font-size: 14px
+					color: #666666
+					transition: all 0.3s ease
+					
+					&:hover
+						color: #6e27c5
+		
+		.mobile-language
+			padding: 15px 20px
+			border-top: 1px solid #E0E0E0
+			
+			.lang-option
+				padding: 8px 16px
+				font-size: 14px
+				font-weight: 500
+				border-radius: 20px
+				cursor: pointer
+				transition: all 0.3s ease
+				
+				&:first-child
+					background: #1a4c40
+					color: white
+				
+				&:last-child
+					background: white
+					border: 1px solid #E0E0E0
+					color: #666666
+					
+					&:hover
+						border-color: #6e27c5
+						color: #6e27c5
+		
+		.mobile-contact
+			padding: 20px
+			
+			.contact-btn
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				gap: 8px
+				padding: 12px 24px
+				background: #1a4c40
+				color: white
+				font-weight: 500
+				border-radius: 24px
+				transition: all 0.3s ease
+				
+				&:hover
+					background: #6e27c5
+				
+				img
+					width: 14px
+					height: 14px
+					transition: transform 0.3s ease
+
+// Mobile Menu Overlay
+.mobile-menu-overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(0, 0, 0, 0.5)
+	opacity: 0
+	visibility: hidden
+	transition: all 0.3s ease
+	z-index: 999
 	
-	.has-dropdown
-		.dropdown-menu
-			z-index: 1001
-			position: absolute
+	&.active
+		opacity: 1
+		visibility: visible
+
+// Mobile Menu Open State
+body.mobile-menu-open
+	overflow: hidden
+	
+	.mobile-menu
+		transform: translateX(0)
+	
+	.mobile-menu-overlay
+		opacity: 1
+		visibility: visible
