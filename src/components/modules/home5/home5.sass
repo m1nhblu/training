@@ -32,19 +32,212 @@
 		border-width: 2px
 
 .products-slider-wrapper
-	.products-slider
-		.slider-track
-			display: flex
-			gap: calc(24/1920*100rem)
+	@apply relative
+	margin-bottom: calc(40/1920*100rem)
+	
+	@media (max-width: 1024px)
+		margin-bottom: 30px
+		
+	@media (max-width: 768px)
+		margin-bottom: 24px
+	
+	.slider-btn
+		@apply absolute top-1/2 -translate-y-1/2 z-10
+		@apply bg-white rounded-full flex-center shadow-drop-shadow-2 transition-300
+		width: calc(48/1920*100rem)
+		height: calc(48/1920*100rem)
+		
+		@media (max-width: 1024px)
+			width: 40px
+			height: 40px
+			
+		@media (max-width: 768px)
+			width: 36px
+			height: 36px
+		
+		&.prev
+			left: calc(-60/1920*100rem)
+			
+			@media (max-width: 1200px)
+				left: -50px
+				
+			@media (max-width: 1024px)
+				left: 10px
+				
+		&.next
+			right: calc(-60/1920*100rem)
+			
+			@media (max-width: 1200px)
+				right: -50px
+				
+			@media (max-width: 1024px)
+				right: 10px
+				
+		&:hover
+			@apply bg-neutral-50 shadow-style-1
+			
+		&:disabled
+			@apply opacity-50 cursor-not-allowed
+
+.products-slider
+	@apply overflow-hidden
+	height: calc(428/1920*100rem)
+	
+	@media (max-width: 1200px)
+		height: auto
+	
+	.slider-track
+		@apply flex transition-transform duration-500
+		gap: calc(40/1920*100rem)
+		
+		@media (max-width: 1200px)
+			gap: 30px
+			
+		@media (max-width: 1024px)
+			gap: 24px
+			
+		@media (max-width: 768px)
+			gap: 16px
 
 .product-card--home5
-	flex-shrink: 0
-	$gap-value: calc(40/1920*100rem)
+	@apply flex-shrink-0
+	width: calc(320/1920*100rem)
+	height: calc(428/1920*100rem)
+	
+	@media (max-width: 1200px)
+		width: 280px
+		height: auto
+		
+	@media (max-width: 1024px)
+		width: calc((100% - 24px) / 2)
+		
+	@media (max-width: 768px)
+		width: calc((100% - 16px) / 2)
+		min-width: 250px
+	
+	.product-inner
+		@apply h-full flex flex-col
+		
+		&:hover
+			.product-image img
+				@apply scale-105
+				
+			.product-name
+				@apply text-primary-950
+	
+	.product-image
+		@apply relative overflow-hidden
+		width: 100%
+		height: calc(320/1920*100rem)
+		
+		@media (max-width: 1200px)
+			height: 280px
+			
+		@media (max-width: 1024px)
+			height: auto
+			aspect-ratio: 1
+		
+		img
+			@apply w-full h-full object-contain transition-transform duration-300
+			
+	.product-info
+		@apply flex-1 flex flex-col justify-center
+		padding: calc(20/1920*100rem)
+		
+		@media (max-width: 1200px)
+			padding: 16px
+			
+		@media (max-width: 768px)
+			padding: 12px
+		
+		.product-category
+			font-size: calc(10/1920*100rem)
+			margin-bottom: calc(8/1920*100rem)
+			
+			@media (max-width: 1200px)
+				font-size: 10px
+				margin-bottom: 6px
+				
+		.product-name
+			font-size: calc(14/1920*100rem)
+			line-height: calc(20/1920*100rem)
+			margin-bottom: calc(8/1920*100rem)
+			@apply transition-colors duration-300
+			
+			@media (max-width: 1200px)
+				font-size: 14px
+				line-height: 20px
+				margin-bottom: 6px
+				
+			@media (max-width: 768px)
+				font-size: 13px
+				line-height: 18px
+				
+		.product-price
+			font-size: calc(14/1920*100rem)
+			
+			@media (max-width: 1200px)
+				font-size: 14px
+				
+			@media (max-width: 768px)
+				font-size: 13px
 
-	width: calc(100% - 0 * #{$gap-value})
+.view-all-btn
+	@apply inline-flex items-center gap-2 rounded-full font-medium transition-300
+	padding: calc(12/1920*100rem) calc(32/1920*100rem)
+	border-width: calc(2/1920*100rem)
+	
+	@media (max-width: 1200px)
+		padding: 10px 28px
+		border-width: 2px
+		
+	@media (max-width: 768px)
+		padding: 8px 24px
+		font-size: 14px
 
-	@media (min-width: 576px)
-		width: calc((100% - 1 * #{$gap-value}) / 2)
-
-	@media (min-width: 1024px)
-		width: calc((100% - 3 * #{$gap-value}) / 4)
+.section-featured-products
+	@apply relative
+	width: 100%
+	max-width: 1920px
+	margin: 0 auto
+	height: 791px
+	padding-top: calc(100/1920*100rem)
+	padding-bottom: calc(80/1920*100rem)
+	
+	@media (max-width: 1200px)
+		height: auto
+		padding-top: 60px
+		padding-bottom: 60px
+		
+	@media (max-width: 1024px)
+		padding-top: 50px
+		padding-bottom: 50px
+		
+	@media (max-width: 768px)
+		padding-top: 40px
+		padding-bottom: 40px
+	
+	h2
+		@apply font-primary
+		font-size: calc(48/1920*100rem)
+		font-weight: 500
+		line-height: calc(56/1920*100rem)
+		height: calc(56/1920*100rem)
+		margin-bottom: calc(40/1920*100rem)
+		
+		@media (max-width: 1200px)
+			font-size: 40px
+			line-height: 48px
+			height: 48px
+			margin-bottom: 30px
+			
+		@media (max-width: 1024px)
+			font-size: 36px
+			line-height: 44px
+			height: 44px
+			
+		@media (max-width: 768px)
+			font-size: 28px
+			line-height: 36px
+			height: 36px
+			margin-bottom: 24px
